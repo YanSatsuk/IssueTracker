@@ -1,0 +1,13 @@
+CREATE TABLE `users` (
+ `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `login` varchar(50) NOT NULL,
+ `email` varchar(100) NOT NULL,
+ `password` varchar(100) DEFAULT NULL,
+ `created` timestamp NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `login` (`login`),
+ UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `users` CHANGE `created` `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE `users` CHANGE `login` `login` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
