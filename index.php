@@ -10,25 +10,39 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <link rel="stylesheet" href="public/src/css/style.css">
     <title>Issue Tracker</title>
 </head>
 <body>
     <div id="app">
         <form id="submit-form">
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
-            </div>
-            <button type="submit" id="log-in" class="btn btn-primary">Log in</button>
-            <button type="submit" id="sign-up" class="btn btn-success">Sign up</button>
         </form>
     </div>
+
+    <script src="public/src/javascript/entry.js" type="module"></script>
+
+    <script id="login" type="text/template">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <a class="btn btn-primary" href="#login" role="button">Log in</a>
+        <a class="btn btn-success" href="#registration" role="button">Sign up</a>
+    </script>
+
+    <script id="registration" type="text/template">
+        <div class="form-group">
+            <label for="user-name">User name</label>
+            <input type="text" class="form-control" id="user-name" placeholder="Enter user name" required>
+        </div>
+        <button type="submit" id="sign-up" class="btn btn-success">Register</button>
+    </script>
 
 
 
@@ -38,6 +52,6 @@ session_start();
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="public/src/javascript/main.js"></script>
+    <!-- <script src="public/src/javascript/main.js"></script> -->
 </body>
 </html>

@@ -31,7 +31,7 @@ const options = {
   body: JSON.stringify(data)
 };
 
-  let url = 'issue-tracker.www/';
+  let url = '';
   
   // const message = isRegister ? 'signup' : 'login';
   // console.log(message);
