@@ -1,8 +1,9 @@
 let btn = document.getElementById('loginBtn');
-btn.addEventListener('click', changeView);
+btn.addEventListener('submit', changeView);
 
 function changeView(e) {
-    //e.preventDefault();
+    // e.preventDefault();
+    //e.submit();
     fetch('http://issue-tracker.www/backend/src/templates/header.php', {
         method: 'POST',
         body: JSON.stringify({"path": "auth/login.php"}),
