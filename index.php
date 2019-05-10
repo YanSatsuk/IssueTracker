@@ -22,7 +22,7 @@ session_start();
 
     <script src="public/src/javascript/entry.js" type="module"></script>
 
-    <script id="login" type="text/template">
+    <script id="loginTemplate" type="text/template">
         <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -32,16 +32,17 @@ session_start();
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Password" required>
         </div>
-        <a class="btn btn-primary" href="#login" role="button">Log in</a>
-        <a class="btn btn-success" href="#registration" role="button">Sign up</a>
+
+        <button type="submit" id="log-in" class="btn btn-primary">Log in</button>
+        <button type="submit" id="sign-up" class="btn btn-success">Sign up</button>
     </script>
 
-    <script id="registration" type="text/template">
+    <script id="registrationTemplate" type="text/template">
         <div class="form-group">
             <label for="user-name">User name</label>
             <input type="text" class="form-control" id="user-name" placeholder="Enter user name" required>
         </div>
-        <button type="submit" id="sign-up" class="btn btn-success">Register</button>
+        <button type="submit" id="registration" class="btn btn-success">Register</button>
     </script>
 
 
@@ -52,6 +53,5 @@ session_start();
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- <script src="public/src/javascript/main.js"></script> -->
 </body>
 </html>
